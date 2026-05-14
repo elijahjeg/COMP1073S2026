@@ -37,17 +37,17 @@ let characterName = "Elijah";
 let age = 19;
 let isSuperhero = true;
 let specialPowers = [];
-let favoriteFood = "Pizza"
+let favoriteFood = "Pizza";
 
 // Function to generate a random character description
 function generateCharacterDesc(){
-    const characterDescription = document.querySelector("#characterDescription")
-    let description = "Meet" + characterName + ", a " + age + "-year-old ";
+    const characterDescription = document.querySelector("#characterDescription");
+    let description = "Meet " + characterName + ", a " + age + "-year-old ";
     if (isSuperhero){
         description += "superhero";
     }
     else {
-        description += "normal person"
+        description += "normal person";
     }
 
     description += " who loves " + favoriteFood + " and has the ability to  " + specialPowers + "!";
@@ -70,4 +70,11 @@ function updateDescription(){
 }
 
 // Add event listeners for buttons using querySelector
+const increaseAgeButton = document.querySelector("#increaseAgeButton");
+const decreaseAgeButton = document.querySelector("#decreaseAgeButton");
+const generateButton = document.querySelector("#generateButton");
 
+increaseAgeButton.addEventListener("click", increaseAge);
+decreaseAgeButton.addEventListener("click", decreaseAge);
+generateButton.addEventListener("click", generateCharacterDesc);
+console.log(1)
