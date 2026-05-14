@@ -41,6 +41,7 @@ let favoriteFood = "Pizza"
 
 // Function to generate a random character description
 function generateCharacterDesc(){
+    const characterDescription = document.querySelector("#characterDescription")
     let description = "Meet" + characterName + ", a " + age + "-year-old ";
     if (isSuperhero){
         description += "superhero";
@@ -50,12 +51,17 @@ function generateCharacterDesc(){
     }
 
     description += " who loves " + favoriteFood + " and has the ability to  " + specialPowers + "!";
-    return description
+    characterDescription.textContent = description;
 }  
 
 // Functions to update character's age
+function increaseAge(){
+    age += 1;
+}
 
-
+function decreaseAge(){
+    age -= 1;
+}
 
 
 // Function to update the character's description after changing age
