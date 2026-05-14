@@ -39,9 +39,19 @@ let isSuperhero = true;
 let specialPowers = [];
 let favoriteFood = "Pizza"
 
-
 // Function to generate a random character description
+function generateCharacterDesc(){
+    let description = "Meet" + characterName + ", a " + age + "-year-old ";
+    if (isSuperhero){
+        description += "superhero";
+    }
+    else {
+        description += "normal person"
+    }
 
+    description += " who loves " + favoriteFood + " and has the ability to  " + specialPowers + "!";
+    return description
+}  
 
 // Functions to update character's age
 
