@@ -33,7 +33,11 @@ display the character's attributes in a creative and humorous way.
 */
 
 // Declare and initialize variables
-
+let characterName = "Elijah";
+let age = 19;
+let isSuperhero = true;
+let specialPowers = [];
+let favoriteFood = "Pizza"
 
 
 // Function to generate a random character description
