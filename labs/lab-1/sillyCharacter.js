@@ -65,7 +65,9 @@ function decreaseAge(){
 
 
 // Function to update the character's description after changing age
-
+function updateDescription(){
+    generateCharacterDesc();
+}
 
 // Add event listeners for buttons using querySelector
 
