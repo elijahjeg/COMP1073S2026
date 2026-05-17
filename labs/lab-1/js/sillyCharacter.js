@@ -36,7 +36,7 @@ display the character's attributes in a creative and humorous way.
 let characterName = "Elijah";
 let age = Math.floor(Math.random() * 100) + 1;
 let isSuperhero = true;
-let specialPowers = [];
+let specialPowers = ["fly", "run with super speed", "turn invisible"];
 let favoriteFood = "Pizza";
 const characterDescription = document.querySelector("#characterDescription");
 
@@ -50,8 +50,17 @@ function generateCharacterDesc(){
         description += "normal person";
     }
 
-    description += " who loves " + favoriteFood + " and has the ability to  " + specialPowers + "!";
+    description += " who loves " + favoriteFood
+    if (specialPowers.length > 0){
+        description += " and has the ability to "
+        description += specialPowers.slice(0, -1).join(", ")
+        if (specialPowers.length > 1)
+            description += " and "
+        description += specialPowers[specialPowers.length-1]
+}
+    description += "!";
     characterDescription.textContent = description;
+    
 }  
 
 // Functions to update character's age
