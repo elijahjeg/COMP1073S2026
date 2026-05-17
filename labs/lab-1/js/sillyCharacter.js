@@ -34,14 +34,14 @@ display the character's attributes in a creative and humorous way.
 
 // Declare and initialize variables
 let characterName = "Elijah";
-let age = 19;
+let age = Math.floor(Math.random() * 100) + 1;
 let isSuperhero = true;
 let specialPowers = [];
 let favoriteFood = "Pizza";
+const characterDescription = document.querySelector("#characterDescription");
 
 // Function to generate a random character description
 function generateCharacterDesc(){
-    const characterDescription = document.querySelector("#characterDescription");
     let description = "Meet " + characterName + ", a " + age + "-year-old ";
     if (isSuperhero){
         description += "superhero";
@@ -56,17 +56,23 @@ function generateCharacterDesc(){
 
 // Functions to update character's age
 function increaseAge(){
-    age += 1;
+    if (age > 0){
+        age += 1;
+    }
 }
 
 function decreaseAge(){
-    age -= 1;
+    if (age < 150){
+        age -= 1;
+    }
 }
 
 
 // Function to update the character's description after changing age
 function updateDescription(){
-    generateCharacterDesc();
+    if (characterDescription.textContent !== ""){
+        generateCharacterDesc();
+    }
 }
 
 // Add event listeners for buttons using querySelector
@@ -76,5 +82,6 @@ const generateButton = document.querySelector("#generateButton");
 
 increaseAgeButton.addEventListener("click", increaseAge);
 decreaseAgeButton.addEventListener("click", decreaseAge);
+increaseAgeButton.addEventListener("click", updateDescription);
+decreaseAgeButton.addEventListener("click", updateDescription);
 generateButton.addEventListener("click", generateCharacterDesc);
-console.log(1)
