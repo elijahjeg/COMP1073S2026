@@ -39,9 +39,13 @@ let isSuperhero = true;
 let specialPowers = ["fly", "run with super speed", "turn invisible"];
 let favoriteFood = "Pizza";
 const characterDescription = document.querySelector("#characterDescription");
+const nameField = document.querySelector("#nameField");
 
 // Function to generate a random character description
 function generateCharacterDesc(){
+    if (nameField.value !== ""){
+        characterName = nameField.value;
+    }
     let description = "Meet " + characterName + ", a " + age + "-year-old ";
     if (isSuperhero){
         description += "superhero";
