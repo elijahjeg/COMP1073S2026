@@ -20,3 +20,11 @@ else if (missionProgress >= 1 && missionProgress <= 70){
 else if (missionProgress > 70 && !enemyNearby){
     statusUpdate.textContent = "Approaching Mission Completion";
 }
+
+else if (missionProgress === 100){
+    statusUpdate.textContent = "Mission Complete Successfully";
+}
+
+else {
+    statusUpdate.textContent = "System Stable";
+}
