@@ -16,3 +16,7 @@ else if (ammo < 5 || !shield){
 else if (missionProgress >= 1 && missionProgress <= 70){
     statusUpdate.textContent = "Mission In Progress";
 }
+
+else if (missionProgress > 70 && !enemyNearby){
+    statusUpdate.textContent = "Approaching Mission Completion";
+}
