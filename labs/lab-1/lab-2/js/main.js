@@ -13,3 +13,6 @@ else if (ammo < 5 || !shield){
     statusUpdate.textContent = "Warning: Low Resources";
 }
 
+else if (missionProgress >= 1 && missionProgress <= 70){
+    statusUpdate.textContent = "Mission In Progress";
+}
