@@ -111,6 +111,14 @@ let cappuccino2 = new Cappuccino("large", true, "skim", "low");
 cappuccino1.serveIt(); // Call the serveIt() method from the parent Coffee class
 cappuccino2.serveIt(); // Call the serveIt() method from the parent Coffee class
 
+let cappuccinoDesc = document.createElement("p");
+cappuccinoDesc.textContent = cappuccino1.cappuccinoDesc(); // Call the cappuccinoDesc() method from the Cappuccino class
+output.appendChild(cappuccinoDesc); // Append the description to the output div
+
+let cappuccinoDesc2 = document.createElement("p");
+cappuccinoDesc2.textContent = cappuccino2.cappuccinoDesc(); // Call the cappuccinoDesc() method from the Cappuccino class
+output.appendChild(cappuccinoDesc2); // Append the description to the output div
+
 // This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 
 // Special thanks to https://openclipart.org/detail/293550/coffee-to-go for the very cool coffee cup SVG
