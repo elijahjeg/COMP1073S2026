@@ -54,19 +54,19 @@ class Coffee {
 
 /* STEP 2: Instatiate a coffee based on the above constructor function */
 let priyanshCoffee = new Coffee("medium", true);
-priyanshCoffee.serveIt();
+// priyanshCoffee.serveIt();
 
 let robertCoffee = new Coffee("large", false);
-robertCoffee.serveIt();
+// robertCoffee.serveIt();
 
 let meganCoffee = new Coffee("small", true);
-meganCoffee.serveIt();
-robertCoffee.serveIt();
-meganCoffee.serveIt();
-meganCoffee.serveIt();
-meganCoffee.serveIt();
-meganCoffee.serveIt();
-meganCoffee.serveIt();
+// meganCoffee.serveIt();
+// robertCoffee.serveIt();
+// meganCoffee.serveIt();
+// meganCoffee.serveIt();
+// meganCoffee.serveIt();
+// meganCoffee.serveIt();
+// meganCoffee.serveIt();
 
 /* STEP 3: Add a method to the Coffee class called serveIt() */
 
@@ -95,14 +95,21 @@ class Cappuccino extends Coffee {
     milkType;
     foamLevel;
     constructor(size, isDecaf, milkType, foamLevel) {
-        super(size, isDecaf);
+        super(size, isDecaf); // Call the parent class constructor
         this.milkType = milkType;
         this.foamLevel = foamLevel;
     }
     cappuccinoDesc() {
+        // Return a string describing the cappuccino
         return `A ${this.size} sized Cappuccino with ${this.milkType} milk and ${this.foamLevel} foam.`;
     }
 }
+// Create two instances of the Cappuccino class
+let cappuccino1 = new Cappuccino("medium", false, "whole", "high");
+let cappuccino2 = new Cappuccino("large", true, "skim", "low");
+
+cappuccino1.serveIt(); // Call the serveIt() method from the parent Coffee class
+cappuccino2.serveIt(); // Call the serveIt() method from the parent Coffee class
 
 // This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 
