@@ -38,4 +38,13 @@ document.getElementById("pizzaOrderForm").addEventListener("submit", function(ev
     document.querySelectorAll('input[name="toppings"]:checked').forEach(function(topping) {
         toppings.push(topping.value);
     });
+
+    // Create a Pizza object
+    const pizzaOrder = new Pizza(customerName, size, crust, toppings);
+
+    // Get the order description from the class method
+    const description = pizzaOrder.getDescription();
+
+    // Display the description
+    document.getElementById("orderDescription").textContent = description;
 });
